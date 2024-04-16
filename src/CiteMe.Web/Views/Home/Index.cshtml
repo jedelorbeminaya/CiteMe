@@ -3,6 +3,29 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome to CiteMe</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4 text-light fw-bold">MINIMICE SU TIEMPO</h1>
+    <p class="text-light">AGENDANDO SU TURNO</p>
 </div>
+
+<form class="form-control ">
+    <div class="mb-3">
+        <label for="name" class="form-label fw-bold">Nombre:</label>
+        <input type="text" class="form-control" id="name" placeholder="Ingrese su nombre">
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label fw-bold">Telefono:</label>
+        <input type="number" class="form-control" id="phone" placeholder="Ingrese su numero telefeno">
+    </div>
+    <div class="mb-3">
+        <label for="date" class="form-label fw-bold">Fecha:</label>
+        <input type="date" class="form-control" id="date">
+    </div>
+    <div class="mb-3">
+        <label for="time" class="form-label fw-bold">Hora:</label>
+        <input type="time" class="form-control" id="time">
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <input class="btn btn-success fw-bold mx-auto" type="submit" value="AGENDAR" />
+    </div>
+    
+</form>

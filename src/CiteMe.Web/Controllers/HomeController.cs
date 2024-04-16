@@ -1,3 +1,4 @@
+using CiteMe.Persistence;
 using CiteMe.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -7,10 +8,11 @@ namespace CiteMe.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly DataContext _context;
+        public HomeController(ILogger<HomeController> logger, DataContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
