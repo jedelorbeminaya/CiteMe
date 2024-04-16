@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace CiteMe.Domain
 {
-    internal class Cites
+    public class Cites
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Telephone { get; set; }
+        public string Date { get; set; }
+        public string Time { get; set; }
     }
 }
