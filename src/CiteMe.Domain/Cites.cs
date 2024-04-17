@@ -8,10 +8,11 @@ namespace CiteMe.Domain
 {
     public class Cites
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Telephone { get; set; }
-        public string Date { get; set; }
-        public string Time { get; set; }
+       
+        public int id { get; set; }
+        public string name { get; set; }
+        public string telephone { get; set; }
+        public string date { get; set; }
+        public string time { get; set; }
     }
 }

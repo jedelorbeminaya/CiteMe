@@ -1,3 +1,4 @@
+using CiteMe.Domain;
 using CiteMe.Persistence;
 using CiteMe.Web.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -15,14 +16,24 @@ namespace CiteMe.Web.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Index(Cites model)
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            _context.Cites.Add(model);
+            _context.SaveChanges();
+            //return View();
+            //return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
