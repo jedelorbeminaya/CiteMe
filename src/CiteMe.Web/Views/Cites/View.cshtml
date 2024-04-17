@@ -1,0 +1,37 @@
+﻿@model CiteMe.Domain.Cites
+
+@{
+    ViewData["Title"] = "CiteMe-View";
+}
+<table class="container table table-striped table-bordered bg-light position-absolute top-50 start-50 translate-middle">
+    <thead>
+        <tr>
+            <th class="text-center"><h2>DETALLES DEL TURNO AGENDADO</h2></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="fw-bold">NOMBRE:</span> @Model.name</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">TELEFONO:</span> @Model.telephone</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">FECHA:</span> @Model.date</td>
+        </tr>
+        <tr>
+            <td><span class="fw-bold">HORA:</span> @Model.time</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="d-md-flex justify-content-md-end">
+                    <a class="btn btn-success fw-bold" asp-controller="Cites" asp-action="Index">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+                        </svg>
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

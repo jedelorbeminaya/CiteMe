@@ -1,0 +1,21 @@
+﻿@model CiteMe.Domain.Cites
+
+@{
+    ViewData["Title"] = "CiteMe-Delete Cite";
+}
+
+
+<div class="container bg-light p-4 rounded-3 position-absolute top-50 start-50 translate-middle">
+    <h1 class="text-center text-success fw-bold">¿ESTA SEGURO QUE QUIERE ELIMINAR ESTE TURNO?</h1>
+    <hr />
+    <h2 class="text-center fw-bold text-success">NOMBRE: <span class="fw-normal text-black">@Model.name</span></h2>
+    <h2 class="text-center fw-bold text-success">FECHA: <span class="fw-normal text-black">@Model.date</span></h2>
+    <hr />
+    <form asp-action="Delete">
+        <div class="btn-group w-100" role="group" aria-label="btn">
+            <a class="btn btn-warning text-light fw-bold" asp-action="Index">Retroceder</a>
+            <input class="btn text-light fw-bold btn-danger" type="submit" value="Si, lo estoy" />
+        </div>
+    </form>
+</div>
+
