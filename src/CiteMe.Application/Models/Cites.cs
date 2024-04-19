@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CiteMe.Domain
+namespace CiteMe.Models
 {
-    public class Cites
+    public class CitesModel
     {
         public int id { get; set; }
         public string name { get; set; }

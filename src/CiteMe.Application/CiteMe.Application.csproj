@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CiteMe.Persistence\CiteMe.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,3 +1,5 @@
+using CiteMe.Application.Contracts;
+using CiteMe.Application.Services;
 using CiteMe.Persistence;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,7 +10,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<DataContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("SqlMainConnection")));
-
+builder.Services.AddScoped<ICitesServices, CitesServices>();
 
 var app = builder.Build();
 
